@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>JS-ToolTip</title>
+<style> <!--
+BODY, P, SPAN, DIV, TABLE, TD, TH, UL, OL, LI {
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+  color: black;
+}
+.code {
+  font-family: Courier New, Monospace;
+  font-size: 12px;
+  margin: 10px;
+  padding: 0px;
+  color: blue;
+}
+--> </style>
+</head>
+<body>
+<script language="JavaScript" src="tooltip.js"></script>
+<h4>Introduction</h4>
+Use this script to view tooltips on mouse-over. Have a look at these examples:
+<br><br>
+<b>
+<a href="#" onMouseOver="toolTip('<b>example #1:</b> width = 270, opacity = 100', 270, 100)" onMouseOut="toolTip()">Example #1</a>
+<br><br>
+<a href="#" onMouseOver="toolTip('<b>example #2:</b> width = default, opacity = default')" onMouseOut="toolTip()">Example #2</a>
+</b>
+<br><br>
+This script was tested with the following operating systems and browsers:
+<br><br>
+<table border=0 cellspacing=0 cellpadding=2><tr valign=top>
+<td nowrap><b>Windows XP:</b></td><td>Internet Explorer 6, Netscape Navigator 4 + 7, Opera 7, Firefox 1</td>
+</tr><tr valign=top>
+<td nowrap><b>Mac OS X:</b></td><td>Internet Explorer 5, Safari 1</td>
+</tr></table><br>
+If you use another browser or operating system, this script may not work for you - sorry.
+<h4>Usage</h4>
+Insert this line into your HTML body (not in the head section):
+<pre class="code">
+&lt;script language="JavaScript" src="tooltip.js"&gt;&lt;/script&gt;
+</pre>
+Use the <i>toolTip</i> function with mouse-over and mouse-out events:
+<ul>
+<li style="margin-bottom:10px">To show a tooltip, use this syntax: <font color=#D00000>toolTip(text, width, opacity)</font><br>
+Note: width (pixels) and opacity (percent: 0 - 100) are optional. Opacity is not supported by all browsers.
+<li>To hide a tooltip, use this syntax: <font color=#D00000>toolTip()</font>
+</ul>
+<h4>Example</h4>
+<pre class="code">
+&lt;a href="#" <font color=#D00000>onMouseOver="toolTip('Just a test', 150)" onMouseOut="toolTip()"</font>&gt;some text here&lt;/a&gt;
+</pre>
+</body>
+</html>

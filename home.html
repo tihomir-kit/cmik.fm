@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	var coeff_explanation = "Lower coefficient value represents more song brain burning, it is typical for helpless repeater-people that listen to the same songs over and over again. Higher coefficient value represents listening more different songs of the same artist more times, more evenly.";
+</script>
+
+
+<div id="input_form">
+	<form id="input" name="input">
+		<h3>Welcome!</h3>
+		<div id="nick">Your Last.FM Nick:</div>
+		<input id="username" type="text" name="username" />
+		<div id="dropdown">
+			Artists:
+			<select id="amount" name="amount">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="25">25</option>
+				<option value="50">50</option>
+			</select>	
+		<input type="submit" value="submit" id="button"/></div>
+	</form>
+	<div class="artist_coeff_holder" id="coefficient_box_home">
+		<div class="coefficient_box">
+			<div class="coefficient_text">Diversity coefficient</div>
+			<div class="coefficient_value">0-100</div>
+			<div class="coefficient_explanation" onMouseOver="toolTip(coeff_explanation, 310)" onMouseOut="toolTip()" onClick="return false;" >What is this?</div>
+		</div>
+	</div>
+	<div id="description">
+		<b>cmik.fm</b> visualizes your music listening habits and shows whether you are often burning single songs into your brain by repeating them over and over again or if you prefer listening to different songs of the same artist equally
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById("username").focus();
+</script>
