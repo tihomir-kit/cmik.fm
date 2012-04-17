@@ -12,6 +12,8 @@ $method = $_POST['method'];
 if ($method == "SetSessionVars") {
 	$_SESSION['username'] = $_POST['username'];
 	$_SESSION['amount'] = $_POST['amount'];
+	$_SESSION['rank'] = 0;
+	$_SESSION['score_avg'] = 0;
 	$_SESSION['safeamount'] = 0;
 }
 

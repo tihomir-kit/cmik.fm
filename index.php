@@ -42,8 +42,8 @@
 
 <div id="header"> <!-- HEADER -->
 	<a href="index.php" id="site_name">
-		<!-- last edited 06/04/2012 -->
-		cmik.fm <!-- v1.1.4 -->
+		<!-- last edited 17/04/2012 -->
+		cmik.fm <!-- v1.1.5 -->
 	</a>
 	<div id="score_box"></div>
 	<div id="info_box"></div>

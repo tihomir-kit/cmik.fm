@@ -35,7 +35,11 @@ class LfmDb {
 	// send email notification whenever someone uses cmik.fm
 	private function SendEmail() {
 		$to = "kittihomir@gmail.com";
-		$subject = $_SESSION['username'] . "(" . $_SESSION['amount'] . ") used cmik.fm";
+		$subject = ""
+			. $_SESSION['username'] . " ("
+			. $_SESSION['amount'] . " - "
+			. $_SESSION['rank'] . " - "
+			. $_SESSION['score_avg'] . ") used cmik.fm";
 		$message = "Link: http://www.last.fm/user/" . $_SESSION['username'];
 		$from = "pootzko@cmikavac.net";
 		$headers = "From:" . $from;
@@ -159,6 +163,8 @@ class LfmDb {
 	public function StoreData($score_avg) {
 		// ignore users with score 0
 		if ($score_avg != 0) {
+			$_SESSION['score_avg'] = $score_avg;
+			
 			$id_result = $this->FindUser("id", "username", $_SESSION['username']);
 			
 			// if user is not in the database
@@ -176,9 +182,6 @@ class LfmDb {
 					$this->UpdateData($id, $score_avg);
 			}
 		}
-		
-		// send an email notification when all is done
-		$this->SendEmail();
 	}
 
 
@@ -193,6 +196,7 @@ class LfmDb {
 		)";
 		$query = mysql_query($sql, $this->db_connection);
 		$row_count = mysql_fetch_row($query);
+		$_SESSION['rank'] = $row_count[0] + 1;
 		
 		
 		// gets users db_amount
@@ -201,17 +205,21 @@ class LfmDb {
 		$row_amount = mysql_fetch_row($query);
 		
 		
+		// send an email notification
+		$this->SendEmail();		
+		
+		
 		if (!$query)
 			return "error";
 		// if recorded amount (the one from the database) is higher than the current one
 		elseif ($_SESSION['amount'] < $row_amount[0]) {
-			$hof_score_msg = $_SESSION['username'] . " (old rank <b>" . ($row_count[0] + 1) . "</b>) did not get it into HoF this time. (explanation below HoF tables)</br><a href='index.php'>Try again</a> with different amount or a different username?";
+			$hof_score_msg = $_SESSION['username'] . " (old rank <b>" . $_SESSION['rank'] . "</b>) did not get it into HoF this time. (explanation below HoF tables)</br><a href='index.php'>Try again</a> with different amount or a different username?";
 			
 			return $hof_score_msg;
 		}
 		// output if users score got into HoF
 		else {
-			$hof_score_msg = $_SESSION['username'] . "'s rank in HoF (with amount " . $_SESSION['amount'] . ") is <b>" . ($row_count[0] + 1) . ".</b></br><a href='index.php'>Try again</a> with a different amount or a different username?";
+			$hof_score_msg = $_SESSION['username'] . "'s rank in HoF (with amount " . $_SESSION['amount'] . ") is <b>" . $_SESSION['rank'] . ".</b></br><a href='index.php'>Try again</a> with a different amount or a different username?";
 			
 			return $hof_score_msg;
 		}
