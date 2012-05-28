@@ -210,7 +210,7 @@ class LfmDb {
 			return "error";
 		// if recorded amount (the one from the database) is higher than the current one
 		elseif ($_SESSION['amount'] < $row_amount[0]) {
-			$hof_score_msg = $_SESSION['username'] . " (old rank <b>" . $_SESSION['rank'] . "</b>) did not get it into HoF this time. (explanation below HoF tables)</br><a href='index.php'>Try again</a> with different amount or a different username?";
+			$hof_score_msg = $_SESSION['username'] . " (old rank <b>" . $_SESSION['rank'] . "</b>) did not get it into HoF this time. (explanation below HoF tables)</br><a href='/'>Try again</a> with different amount or a different username?";
 			
 			// send an email notification (N for Negative - user did not get it into HoF)
 			$this->SendEmail("N");
@@ -219,7 +219,7 @@ class LfmDb {
 		}
 		// output if users score got into HoF
 		else {
-			$hof_score_msg = $_SESSION['username'] . "'s rank in HoF (with amount " . $_SESSION['amount'] . ") is <b>" . $_SESSION['rank'] . ".</b></br><a href='index.php'>Try again</a> with a different amount or a different username?";
+			$hof_score_msg = $_SESSION['username'] . "'s rank in HoF (with amount " . $_SESSION['amount'] . ") is <b>" . $_SESSION['rank'] . ".</b></br><a href='/'>Try again</a> with a different amount or a different username?";
 			
 			// send an email notification (P for Positive - users score recorded in HoF)
 			$this->SendEmail("P");

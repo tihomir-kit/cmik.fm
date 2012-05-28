@@ -46,7 +46,7 @@ $(document).ready(function() {
 			error: function(artist_list) {
 				showErrorMsg(
 						"<p>User does not exist.</p>" +
-						"<p>Please <a href='index.php'>try another username</a>.</p>"
+						"<p>Please <a href='/'>try another username</a>.</p>"
 				);
 				
 				$.cookie('active', null);
@@ -321,7 +321,7 @@ $(document).ready(function() {
 					if (data != "error")
 						var hof_score_msg = data;
 					else
-						var hof_score_msg = "An error occured.</br>Please <a href='index.php'>try again</a>.";
+						var hof_score_msg = "An error occured.</br>Please <a href='/'>try again</a>.";
 					
 					// notify user above the menu about final score being available
 					$("#info_box").css("color", "#F5B800");
@@ -356,7 +356,7 @@ $(document).ready(function() {
 					if (real_amount < 5) {
 						showErrorMsg(
 							"<p>Not enough artists in " + username + "'s library (minimum 5).</p>" +
-							"<p>Please <a href='index.php'>try again</a>.</p>"
+							"<p>Please <a href='/'>try again</a>.</p>"
 						);
 						
 						$.cookie('active', null);
@@ -407,7 +407,7 @@ $(document).ready(function() {
 		if ($.cookie('active') == "true") {
 			showErrorMsg(
 				"<p>Session already in use.</p>" +
-				"<p>Please wait until it's finished, and then <a href='index.php'>try again</a>.</br>" +
+				"<p>Please wait until it's finished, and then <a href='/'>try again</a>.</br>" +
 				"(retry allowed 10 seconds after the previous one has finished)</p>"
 			);
 		}

@@ -41,7 +41,7 @@
 
 
 <div id="header"> <!-- HEADER -->
-	<a href="index.php" id="site_name">
+	<a href="/" id="site_name">
 		<!-- last edited 17/04/2012 -->
 		cmik.fm <!-- v1.1.5 -->
 	</a>
