@@ -82,7 +82,7 @@
 
 
 <div id="footer"> <!-- FOOTER -->
-	<pre> -- Copyleft 2012., all wrongs reserved  --  <a href="http://cmikavac.net">cmikavac.net</a> :: <a href="mailto:pootzko@gmail.com">pootzko@gmail.com</a>  :: <a href="http://cmikavac.net/2012/03/31/cmik-fm/" target="_blank">comments</a> --  </pre>
+	<pre>-- Copyleft 2012., all wrongs reserved  --  <a href="http://cmikavac.net">cmikavac.net</a> :: <a href="mailto:pootzko@gmail.com">pootzko@gmail.com</a> :: <a href="http://cmikavac.net/2012/03/31/cmik-fm/" target="_blank">comments</a> --</pre>
 </div> <!-- /FOOTER -->
 
 
