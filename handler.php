@@ -67,7 +67,7 @@ if ($method == "StoreData") {
 
 // fetch data for HoF tables from the database
 if (($method == "GetTop") || ($method == "GetLowest")) {
-	$lfm_db_obj = new LfmDb(); 
+	$lfm_db_obj = new LfmDb();
 	echo $lfm_db_obj->PrepareTables($method);
 }
 
