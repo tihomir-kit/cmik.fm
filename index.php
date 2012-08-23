@@ -5,7 +5,7 @@
 *************************************************************
 *
 * Copyright 2012, Tihomir Kit (kittihomir@gmail.com)
-* spilp is distributed under the terms of GNU General Public License v3
+* cmik.fk is distributed under the terms of GNU General Public License v3
 * A copy of GNU GPL v3 license can be found in LICENSE.txt or
 * at http://www.gnu.org/licenses/gpl-3.0.html
 *

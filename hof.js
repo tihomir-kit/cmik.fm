@@ -7,7 +7,7 @@ function generateHofTables(method_name) {
 		var title = "Lowest 50 scores";
 		var float = "right";
 	}
-	
+
 
 	// generate table header information and append users with scores below (data)
 	$.ajax({
@@ -29,7 +29,7 @@ function generateHofTables(method_name) {
 		}
 	});
 
-	
-	return false; 
+
+	return false;
 }
 
