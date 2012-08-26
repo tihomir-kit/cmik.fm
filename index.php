@@ -5,7 +5,7 @@
 *************************************************************
 *
 * Copyright 2012, Tihomir Kit (kittihomir@gmail.com)
-* cmik.fk is distributed under the terms of GNU General Public License v3
+* cmik.fm is distributed under the terms of GNU General Public License v3
 * A copy of GNU GPL v3 license can be found in LICENSE.txt or
 * at http://www.gnu.org/licenses/gpl-3.0.html
 *
@@ -14,6 +14,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta name="description" content="Visualize your music listening/repeating habbits using last.fm." />
+	<meta name="keywords" content="visualization, repeating, music, last.fm" />
 	<title>cmik.fm</title>
 	<link rel="stylesheet" type="text/css" href="lastfm.css" />
 	<link rel="shortcut icon" href="/images/favicon.ico" />

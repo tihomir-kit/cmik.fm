@@ -13,8 +13,8 @@ class LfmDb {
 		}
 
 		mysql_select_db($db_name, $this->db_connection);
-		//createTable();
-		//dropTable();
+		//$this->CreateTable();
+		//$this->DropTable();
 	}
 
 
